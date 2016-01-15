@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{663A5312-59E2-480F-A1DF-41C486F48A21}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AOPTest</RootNamespace>
+    <AssemblyName>AOPTest</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <StartupObject>AOPTest.Program</StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Aspect01\Program.cs" />
+    <Compile Include="Aspect01\AspectBase.cs" />
+    <Compile Include="Aspect01\AspectConfiguration.cs" />
+    <Compile Include="Aspect01\AspectControllerInfo.cs" />
+    <Compile Include="Aspect01\AspectMessageSink.cs" />
+    <Compile Include="Aspect01\AspectObjectAttribute.cs" />
+    <Compile Include="Aspect01\AspectOrientedObject.cs" />
+    <Compile Include="Aspect01\AspectProperty.cs" />
+    <Compile Include="Aspect01\IMessageMatcher.cs" />
+    <Compile Include="Aspect01\MethodMessageUtil.cs" />
+    <Compile Include="Aspect01\RegExMethNameMatcher.cs" />
+    <Compile Include="Aspect01\Test1.cs" />
+    <Compile Include="Aspect01\TestAspect.cs" />
+    <Compile Include="Aspect02\AfterAttribute.cs" />
+    <Compile Include="Aspect02\AspectAttribute.cs" />
+    <Compile Include="Aspect02\BeforeAttribute.cs" />
+    <Compile Include="Aspect02\CodeInjection.cs" />
+    <Compile Include="Aspect02\CountingCalls.cs" />
+    <Compile Include="Aspect02\ExternalFilter.cs" />
+    <Compile Include="Aspect02\Helper.cs" />
+    <Compile Include="Aspect02\ITestCatcher.cs" />
+    <Compile Include="Aspect02\LogAfter.cs" />
+    <Compile Include="Aspect02\LogBefore.cs" />
+    <Compile Include="Aspect02\LogError.cs" />
+    <Compile Include="Aspect02\LogExceptionAttribute.cs" />
+    <Compile Include="Aspect02\LogExceptionToFile.cs" />
+    <Compile Include="Aspect02\LoggerToFile.cs" />
+    <Compile Include="Aspect02\MethodCall.cs" />
+    <Compile Include="Aspect02\Program.cs" />
+    <Compile Include="Aspect02\Test2.cs" />
+    <Compile Include="Aspect03\ITestCatcher.cs" />
+    <Compile Include="Aspect03\LoggerAttribute.cs" />
+    <Compile Include="Aspect03\Program.cs" />
+    <Compile Include="Aspect03\AspectFactory.cs" />
+    <Compile Include="Aspect03\Aspects\AspectAttribute.cs" />
+    <Compile Include="Aspect03\Aspects\CountingCalls.cs" />
+    <Compile Include="Aspect03\Aspects\ExternalFilter.cs" />
+    <Compile Include="Aspect03\Aspects\LogExceptionToFile.cs" />
+    <Compile Include="Aspect03\Aspects\LoggerToFile.cs" />
+    <Compile Include="Aspect03\Aspects\Helper.cs" />
+    <Compile Include="Aspect03\Test02.cs" />
+    <Compile Include="DuckTyping\IHas2DPosition.cs" />
+    <Compile Include="DuckTyping\Program.cs" />
+    <Compile Include="DuckTyping\ProxyFactory.cs" />
+    <Compile Include="DuckTyping\Vector2.cs" />
+    <Compile Include="DuckTyping\Vector3.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

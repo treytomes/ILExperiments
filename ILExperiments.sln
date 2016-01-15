@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicAssemblyGenerator", "DynamicAssemblyGenerator\DynamicAssemblyGenerator.csproj", "{608DF5FF-D4DC-423A-B69B-D1FB0006C4F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AOPTest", "AOPTest\AOPTest.csproj", "{663A5312-59E2-480F-A1DF-41C486F48A21}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mixins", "Mixins\Mixins.csproj", "{2EFAE777-54AD-4244-BCD8-A2B7F44DD47F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{608DF5FF-D4DC-423A-B69B-D1FB0006C4F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{608DF5FF-D4DC-423A-B69B-D1FB0006C4F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{608DF5FF-D4DC-423A-B69B-D1FB0006C4F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{608DF5FF-D4DC-423A-B69B-D1FB0006C4F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{663A5312-59E2-480F-A1DF-41C486F48A21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{663A5312-59E2-480F-A1DF-41C486F48A21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{663A5312-59E2-480F-A1DF-41C486F48A21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{663A5312-59E2-480F-A1DF-41C486F48A21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2EFAE777-54AD-4244-BCD8-A2B7F44DD47F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EFAE777-54AD-4244-BCD8-A2B7F44DD47F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EFAE777-54AD-4244-BCD8-A2B7F44DD47F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EFAE777-54AD-4244-BCD8-A2B7F44DD47F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
