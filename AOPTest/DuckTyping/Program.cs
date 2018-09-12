@@ -16,8 +16,9 @@ namespace AOPTest.DuckTyping
             var points = new IHas2DPosition[]
             {
                 ProxyFactory.Create<IHas2DPosition>(new Vector3(10.0f, 20.0f, 30.0f)),
-                ProxyFactory.Create<IHas2DPosition>(new Vector2(3.141f, 6.282f)),
-                ProxyFactory.Create<IHas2DPosition>(new PointF(14.98f, 392.12f)),
+				ProxyFactory.Create<IHas2DPosition>(new Vector2(3.141f, 6.282f)),
+				ProxyFactory.Create<IHas2DPosition>(new Vector2(6.282f, 3.141f)),
+				ProxyFactory.Create<IHas2DPosition>(new PointF(14.98f, 392.12f)),
                 ProxyFactory.Create<IHas2DPosition>(new SizeF(50, 100))
             };
             

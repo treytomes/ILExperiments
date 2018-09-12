@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Reflection.Emit;
-using System.Text;
 using System.Threading;
 
 namespace AOPTest.DuckTyping
@@ -19,9 +18,20 @@ namespace AOPTest.DuckTyping
 
 		#region Variables
 
+		private static Dictionary<KeyValuePair<Type, Type>, Type> _typeCache;
+
 		private static TypeBuilder _typeBuilder;
 		private static FieldBuilder _target;
 		private static FieldBuilder _interface;
+
+		#endregion
+
+		#region Constructors
+
+		static ProxyFactory()
+		{
+			_typeCache = new Dictionary<KeyValuePair<Type, Type>, Type>();
+		}
 
 		#endregion
 
@@ -64,6 +74,12 @@ namespace AOPTest.DuckTyping
 		/// <returns></returns>
 		private static Type EmitProxyType(Type targetType, Type interfaceType)
 		{
+			var kv = new KeyValuePair<Type, Type>(targetType, interfaceType);
+			if (_typeCache.ContainsKey(kv))
+			{
+				return _typeCache[kv];
+			}
+
 			// Get the current application domain for the current thread:
 			var currentDomain = Thread.GetDomain();
 
@@ -110,6 +126,7 @@ namespace AOPTest.DuckTyping
 			myAssemblyBuilder.Save("Test.dll");
 #endif
 
+			_typeCache.Add(kv, type);
 			return type;
 		}
 
