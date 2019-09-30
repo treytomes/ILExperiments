@@ -13,6 +13,7 @@ namespace AOPTest
 			Console.Write("Press any key to continue: ");
 			Console.ReadKey();
 
+			// AOP with .NET Remoting.
 			Console.WriteLine("Testing AOP Method 1...");
 			Console.WriteLine();
 			Aspect01.Program.Main();
